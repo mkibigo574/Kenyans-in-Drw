@@ -482,12 +482,20 @@ button:focus-visible {
 
 .hero-stats {
   display: flex;
-  gap: 60px;
+  gap: 0;
   justify-content: center;
-  margin-top: 60px;
+  align-items: stretch;
+  margin: 60px auto 0;
+  width: fit-content;
+  max-width: 100%;
   flex-wrap: wrap;
-  padding-top: 36px;
-  border-top: 1px solid rgba(212, 166, 74, .2);
+  padding: 22px 14px;
+  background: rgba(10, 10, 11, .82);
+  border: 1px solid rgba(212, 166, 74, .35);
+  border-radius: 20px;
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .06);
   position: relative;
 }
 .hero-stats::before {
@@ -506,6 +514,14 @@ button:focus-visible {
     var(--aus-navy) 66% 82%,
     var(--aus-red) 82% 100%);
   border-radius: 2px;
+}
+.stat {
+  text-align: center;
+  padding: 6px 36px;
+  position: relative;
+}
+.stat + .stat {
+  border-left: 1px solid rgba(212, 166, 74, .22);
 }
 .stat { text-align: center; }
 .stat-num {
@@ -1638,7 +1654,9 @@ footer h4 {
   .carousel-track { min-height: 580px; height: auto; }
   .carousel-slide { position: relative; padding: 60px 18px 90px; }
   .carousel-slide:not(.active) { display: none; }
-  .hero-stats { gap: 26px; margin-top: 40px; padding-top: 28px; }
+  .hero-stats { margin-top: 40px; padding: 16px 8px; gap: 0; }
+  .stat { padding: 10px 18px; }
+  .stat + .stat { border-left: 1px solid rgba(212, 166, 74, .22); }
   .stat-num { font-size: 2.2rem; }
   .carousel-arrow { width: 42px; height: 42px; }
   .carousel-controls { bottom: 24px; gap: 18px; }
@@ -1656,4 +1674,9 @@ footer h4 {
   .carousel-controls { padding: 0 12px; }
   .carousel-dot { width: 28px; }
   .carousel-dot.active { width: 48px; }
+  /* Stack stats vertically with horizontal dividers on tiny screens */
+  .hero-stats { flex-direction: column; padding: 14px 22px; }
+  .stat { padding: 12px 0; width: 100%; }
+  .stat + .stat { border-left: 0; border-top: 1px solid rgba(212, 166, 74, .22); }
+  .stat-num { font-size: 2rem; }
 }
