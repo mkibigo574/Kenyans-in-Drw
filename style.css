@@ -1451,6 +1451,31 @@ footer {
   margin-bottom: 60px;
 }
 .footer-brand .logo-text strong { color: var(--kcd-gold-bright); }
+.footer-brand .logo {
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 22px;
+  border-bottom: 1px dashed rgba(212, 166, 74, .25);
+  margin-bottom: 4px;
+}
+.footer-brand .logo-mark {
+  width: 88px;
+  height: 88px;
+  border-width: 3px;
+  box-shadow:
+    0 0 0 4px rgba(212, 166, 74, .15),
+    0 0 36px rgba(212, 166, 74, .35),
+    0 12px 28px rgba(0, 0, 0, .5);
+}
+.footer-brand .logo-text strong {
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+}
+.footer-brand .logo-text span {
+  font-size: .78rem;
+  letter-spacing: 3px;
+  margin-top: 2px;
+}
 .footer-brand > p {
   margin: 22px 0;
   color: rgba(250, 244, 232, .82);
