@@ -13,6 +13,11 @@
   --kcd-paper: #fbf7ef;
   --kcd-text: #2b241c;
   --kcd-muted: #6a5e4d;
+  /* Australian flag accents */
+  --aus-navy: #012169;
+  --aus-navy-deep: #00174d;
+  --aus-red: #e4002b;
+  --aus-blue-soft: #1a3c8f;
   --shadow-sm: 0 2px 10px rgba(20, 16, 12, .06);
   --shadow-md: 0 10px 32px rgba(20, 16, 12, .10);
   --shadow-lg: 0 30px 60px rgba(20, 16, 12, .20);
@@ -50,9 +55,30 @@ h3 { font-size: 1.4rem; }
 p { color: var(--kcd-text); }
 ::selection { background: var(--kcd-gold); color: var(--kcd-black); }
 
+/* Accessible focus states */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--kcd-gold-bright);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.btn:focus-visible {
+  outline-offset: 4px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .container { width: min(1200px, 92%); margin-inline: auto; }
 
-/* ========== Maasai pattern dividers ========== */
+/* ========== Maasai pattern dividers (Kenyan + Aus accent) ========== */
 .pattern-divider {
   height: 26px;
   width: 100%;
@@ -63,9 +89,19 @@ p { color: var(--kcd-text); }
     linear-gradient(45deg, var(--kcd-gold) 25%, transparent 25%);
   background-size: 26px 26px;
   background-color: var(--kcd-black);
-  border-top: 3px solid var(--kcd-gold);
+  border-top: 3px solid var(--aus-navy);
   border-bottom: 3px solid var(--kcd-gold);
   box-shadow: 0 6px 20px rgba(0,0,0,.15);
+  position: relative;
+}
+.pattern-divider::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 3px;
+  background: var(--aus-navy);
 }
 
 /* ========== Navbar ========== */
@@ -97,27 +133,18 @@ p { color: var(--kcd-text); }
   color: var(--kcd-cream);
 }
 .logo-mark {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 50%, var(--kcd-red) 0 30%, var(--kcd-black) 30% 37%, var(--kcd-cream) 37% 43%, var(--kcd-black) 43% 50%, var(--kcd-green) 50% 100%);
+  object-fit: cover;
+  background: white;
   border: 2px solid var(--kcd-gold);
-  box-shadow: 0 0 0 3px rgba(212, 166, 74, .15), inset 0 0 12px rgba(0,0,0,.3);
-  display: grid;
-  place-items: center;
-  font-family: var(--serif);
-  font-weight: 900;
-  color: var(--kcd-cream);
-  font-size: 0;
-  position: relative;
+  box-shadow: 0 0 0 3px rgba(212, 166, 74, .18), 0 6px 18px rgba(0,0,0,.25);
+  transition: transform .35s ease, box-shadow .25s;
 }
-.logo-mark::after {
-  content: 'KIDA';
-  font-size: 11px;
-  letter-spacing: .5px;
-  color: var(--kcd-cream);
-  text-shadow: 0 1px 3px rgba(0,0,0,.6);
+.logo:hover .logo-mark {
+  transform: rotate(-6deg) scale(1.04);
+  box-shadow: 0 0 0 3px rgba(212, 166, 74, .3), 0 10px 26px rgba(0,0,0,.35);
 }
 .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .logo-text strong {
@@ -252,6 +279,20 @@ p { color: var(--kcd-text); }
     radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .65) 80%),
     linear-gradient(200deg, rgba(15, 15, 16, .85) 0%, rgba(20, 80, 42, .75) 55%, rgba(28, 26, 24, .9) 100%),
     url('795049-Scardovari-Sky-Boats-Marinas.jpg') center/cover no-repeat;
+  animation: heroZoom 18s ease-in-out infinite alternate;
+}
+.slide-4::before {
+  background:
+    radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .7) 80%),
+    linear-gradient(135deg, rgba(122, 17, 24, .6) 0%, rgba(15, 15, 16, .75) 50%, rgba(1, 33, 105, .65) 100%),
+    url('uluru.jpeg') center/cover no-repeat;
+  animation: heroZoom 18s ease-in-out infinite alternate;
+}
+.slide-5::before {
+  background:
+    radial-gradient(ellipse at center, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, .75) 80%),
+    linear-gradient(180deg, rgba(1, 33, 105, .55) 0%, rgba(15, 15, 16, .8) 55%, rgba(184, 36, 44, .6) 100%),
+    url('garramilla.jpeg') center/cover no-repeat;
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
 @keyframes heroZoom {
@@ -447,6 +488,24 @@ p { color: var(--kcd-text); }
   flex-wrap: wrap;
   padding-top: 36px;
   border-top: 1px solid rgba(212, 166, 74, .2);
+  position: relative;
+}
+.hero-stats::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--kcd-black) 0 22%,
+    var(--kcd-red) 22% 38%,
+    var(--kcd-gold) 38% 50%,
+    var(--kcd-green) 50% 66%,
+    var(--aus-navy) 66% 82%,
+    var(--aus-red) 82% 100%);
+  border-radius: 2px;
 }
 .stat { text-align: center; }
 .stat-num {
@@ -554,7 +613,7 @@ section { padding: 110px 0; position: relative; }
 .value-pill:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .value-pill:nth-child(2) { border-left-color: var(--kcd-red); }
 .value-pill:nth-child(3) { border-left-color: var(--kcd-gold); }
-.value-pill:nth-child(4) { border-left-color: var(--kcd-black); }
+.value-pill:nth-child(4) { border-left-color: var(--aus-navy); }
 .value-pill svg { flex-shrink: 0; }
 
 .about-visual {
@@ -959,6 +1018,10 @@ section { padding: 110px 0; position: relative; }
   flex-shrink: 0;
   box-shadow: 0 0 10px rgba(184, 36, 44, .6);
 }
+.welfare-coverage li:nth-child(3n)::before {
+  background: linear-gradient(135deg, var(--aus-navy), var(--kcd-gold));
+  box-shadow: 0 0 10px rgba(1, 33, 105, .55);
+}
 .welfare-visual {
   background:
     linear-gradient(160deg, var(--kcd-red-deep) 0%, var(--kcd-red) 55%, var(--kcd-gold) 100%);
@@ -1158,7 +1221,24 @@ section { padding: 110px 0; position: relative; }
   letter-spacing: .8px;
   text-transform: uppercase;
 }
-.badge-loc { background: var(--kcd-cream-warm); color: var(--kcd-charcoal); }
+.badge-loc {
+  background: var(--aus-navy);
+  color: white;
+  position: relative;
+  padding-left: 22px;
+}
+.badge-loc::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--aus-red);
+  box-shadow: 0 0 6px rgba(228, 0, 43, .8);
+  transform: translateY(-50%);
+}
 .badge-price { background: var(--kcd-green); color: white; }
 .badge-price.free { background: linear-gradient(135deg, var(--kcd-gold-bright), var(--kcd-gold)); color: var(--kcd-black); }
 .badge-past { background: #e5e2dc; color: #555; }
@@ -1224,7 +1304,9 @@ section { padding: 110px 0; position: relative; }
 .leader-card:nth-child(6) .leader-avatar { background: linear-gradient(135deg, var(--kcd-red), var(--kcd-charcoal)); }
 .leader-card:nth-child(7) .leader-avatar { background: linear-gradient(135deg, var(--kcd-black), var(--kcd-gold)); }
 .leader-card:nth-child(8) .leader-avatar { background: linear-gradient(135deg, var(--kcd-red-deep), var(--kcd-gold)); }
-.leader-card:nth-child(9) .leader-avatar { background: linear-gradient(135deg, var(--kcd-green), var(--kcd-red)); }
+.leader-card:nth-child(9) .leader-avatar { background: linear-gradient(135deg, var(--aus-navy), var(--kcd-gold)); }
+.leader-card:nth-child(10) .leader-avatar { background: linear-gradient(135deg, var(--kcd-green), var(--aus-navy)); }
+.leader-card:nth-child(11) .leader-avatar { background: linear-gradient(135deg, var(--aus-navy-deep), var(--kcd-red)); }
 .leader-initials {
   font-family: var(--serif);
   font-size: 4rem;
@@ -1273,8 +1355,9 @@ section { padding: 110px 0; position: relative; }
 /* ========== Join CTA ========== */
 .join-cta {
   background:
-    radial-gradient(circle at 30% 70%, rgba(212, 166, 74, .15), transparent 50%),
-    linear-gradient(120deg, var(--kcd-red-deep) 0%, var(--kcd-red) 50%, var(--kcd-green-deep) 100%);
+    radial-gradient(circle at 30% 70%, rgba(212, 166, 74, .18), transparent 50%),
+    radial-gradient(circle at 85% 20%, rgba(1, 33, 105, .35), transparent 55%),
+    linear-gradient(120deg, var(--kcd-red-deep) 0%, var(--kcd-red) 45%, var(--aus-navy) 100%);
   color: var(--kcd-cream);
   text-align: center;
   padding: 130px 0;
@@ -1391,13 +1474,76 @@ footer h4 {
 .footer-contact a { color: var(--kcd-gold-bright); }
 .footer-contact a:hover { text-decoration: underline; }
 
-.footer-disclaimer {
-  border-top: 1px solid rgba(255, 255, 255, .1);
-  padding: 30px 0;
-  font-size: .84rem;
-  color: rgba(250, 244, 232, .72);
+.footer-acknowledgement {
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  margin-top: 20px;
+  padding: 32px 24px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  position: relative;
+}
+.footer-acknowledgement p {
+  font-size: .9rem;
   line-height: 1.75;
+  color: rgba(250, 244, 232, .82);
+}
+.footer-acknowledgement p strong {
+  color: var(--kcd-gold-bright);
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: .5px;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+.acknowledgement-flags {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.acknowledgement-flags span {
+  width: 28px;
+  height: 18px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.4);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.15);
+}
+.flag-ke {
+  background:
+    linear-gradient(180deg,
+      var(--kcd-black) 0 28%,
+      white 28% 32%,
+      var(--kcd-red) 32% 64%,
+      white 64% 68%,
+      var(--kcd-green) 68% 100%);
+}
+.flag-au {
+  background:
+    linear-gradient(135deg, var(--aus-navy) 0 60%, var(--aus-red) 60% 100%);
+}
+.flag-au::after {
+  content: '★';
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.footer-disclaimer {
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  padding: 26px 0;
+  font-size: .82rem;
+  color: rgba(250, 244, 232, .68);
+  text-align: center;
+  line-height: 1.7;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -1405,6 +1551,22 @@ footer h4 {
   background: #050505;
   padding: 20px 0;
   border-top: 1px solid var(--kcd-gold);
+  position: relative;
+}
+.footer-bottom::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    var(--kcd-black) 0 20%,
+    var(--kcd-red) 20% 36%,
+    var(--kcd-gold) 36% 50%,
+    var(--kcd-green) 50% 66%,
+    var(--aus-navy) 66% 84%,
+    var(--aus-red) 84% 100%);
 }
 .footer-bottom .container {
   display: flex;
