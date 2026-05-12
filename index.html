@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KIDA — Kenyans In Darwin</title>
+<meta name="description" content="The Kenyans In Darwin (KIDA) brings together Kenyans living in the Northern Territory through culture, welfare and connection." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ========== Navbar ========== -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="logo" aria-label="KIDA home">
+      <div class="logo-mark" aria-hidden="true"></div>
+      <div class="logo-text">
+        <strong>KIDA</strong>
+        <span>Kenyans In Darwin</span>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#welfare">Welfare</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a class="btn-register" href="#register">Register</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ========== Hero Carousel ========== -->
+<section class="hero" id="home">
+  <div class="carousel-track" id="carouselTrack">
+
+    <div class="carousel-slide slide-1 active">
+      <div class="slide-inner">
+        <span class="hero-eyebrow"><span class="dot"></span>Karibu &middot; Welcome to the Top End</span>
+        <h1>United, Empowered, <br />and <em>Thriving</em> &mdash; <br />Kenyans in the Top End</h1>
+        <p class="hero-sub">
+          KIDA is the proud home of Kenyan families and friends across Darwin and the Northern Territory &mdash; a place where culture, support and community come alive under the tropical sun.
+        </p>
+        <div class="hero-cta-row">
+          <a class="btn btn-primary" href="#register">Register Today
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#about">Discover KIDA</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-slide slide-2">
+      <div class="slide-inner">
+        <span class="hero-eyebrow"><span class="dot"></span>Harambee Spirit &middot; Stronger Together</span>
+        <h1>One Community, <br />One <em>Heartbeat</em>, <br />One Darwin</h1>
+        <p class="hero-sub">
+          From cultural nights at Mindil Beach to welfare support in moments that matter most &mdash; KIDA walks every step of the journey with you.
+        </p>
+        <div class="hero-cta-row">
+          <a class="btn btn-primary" href="#welfare">Our Welfare Program
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#events">Upcoming Events</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-slide slide-3">
+      <div class="slide-inner">
+        <span class="hero-eyebrow"><span class="dot"></span>Culture &middot; Heritage &middot; Belonging</span>
+        <h1>Where the Spirit <br />of Kenya Meets <br />the <em>Top End Sun</em></h1>
+        <p class="hero-sub">
+          Celebrate Jamhuri, Madaraka and Mashujaa with the people who feel like family. KIDA is more than membership &mdash; it's home, retold under southern skies.
+        </p>
+        <div class="hero-cta-row">
+          <a class="btn btn-primary" href="#register">Become a Member
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#leadership">Meet the Committee</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="carousel-controls">
+    <button class="carousel-arrow" id="carouselPrev" aria-label="Previous slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="carousel-dots" id="carouselDots">
+      <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+      <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+      <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+    </div>
+    <button class="carousel-arrow" id="carouselNext" aria-label="Next slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <div class="container" style="position: relative;">
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">250+</div>
+        <div class="stat-label">Active Members</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">12</div>
+        <div class="stat-label">Events / Year</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Welfare Cover</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pattern-divider" aria-hidden="true"></div>
+
+<!-- ========== About ========== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="section-eyebrow">About Us</span>
+        <h2>A Home Away From Home in the Northern Territory</h2>
+        <p class="lead">
+          The Kenyans In Darwin (KIDA) is a not-for-profit association bringing together Kenyans living, working and studying across Darwin and the wider Top End.
+        </p>
+        <p>
+          From quiet bush dinners to lively cultural celebrations, KIDA exists to keep our Kenyan heritage alive while building strong, supportive relationships that make life in Australia feel a little closer to home.
+        </p>
+        <p>
+          Whether you're newly arrived, raising a family, or have been part of the Territory's story for years &mdash; you belong here.
+        </p>
+        <div class="about-values">
+          <div class="value-pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--kcd-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Community
+          </div>
+          <div class="value-pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--kcd-red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            Welfare
+          </div>
+          <div class="value-pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--kcd-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/></svg>
+            Culture
+          </div>
+          <div class="value-pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--kcd-black)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Heritage
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal" aria-hidden="true">
+        <div class="about-visual-inner">
+          <h3>Harambee!</h3>
+          <p>"Let us all pull together" &mdash; the Kenyan spirit that shapes everything we do in Darwin.</p>
+        </div>
+        <div class="about-badge">
+          <strong>250+</strong>
+          <span>Families &amp; Friends</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Membership ========== -->
+<section class="membership" id="register">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Membership</span>
+      <h2>Why Join KIDA?</h2>
+      <p>One small step. A whole community waiting on the other side. Here's what membership unlocks for you and your family.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <span class="benefit-num">01 / Benefit</span>
+        <div class="benefit-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Discounted Events</h3>
+        <p>Members enjoy reduced rates at our cultural nights, family days, and end-of-year celebrations across the Top End.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <span class="benefit-num">02 / Benefit</span>
+        <div class="benefit-icon" style="color: var(--kcd-red-deep);">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Networking</h3>
+        <p>Tap into a tight-knit professional and social network spanning healthcare, mining, education, hospitality and government in NT.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <span class="benefit-num">03 / Benefit</span>
+        <div class="benefit-icon" style="color: var(--kcd-green-deep);">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Cultural Celebrations</h3>
+        <p>Jamhuri Day, Madaraka Day, Mashujaa Day &mdash; we mark the Kenyan calendar together with food, music, and the next generation.</p>
+      </div>
+      <div class="benefit-card reveal">
+        <span class="benefit-num">04 / Benefit</span>
+        <div class="benefit-icon" style="color: var(--kcd-black);">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Community Support</h3>
+        <p>From welcoming new arrivals to standing together in tough times &mdash; you are never alone in Darwin when you're part of KIDA.</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 60px;" class="reveal">
+      <a href="#join" class="btn btn-primary">Become a Member
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Welfare ========== -->
+<section class="welfare" id="welfare">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Welfare Program</span>
+      <h2>Standing Together in Times of Loss</h2>
+      <p>KIDA members can rely on a dedicated welfare fund that provides financial assistance and solidarity during bereavement in the nuclear family.</p>
+    </div>
+    <div class="welfare-grid">
+      <div class="welfare-text reveal">
+        <h3>How the Welfare Fund Works</h3>
+        <p>
+          Every active KIDA member contributes to a shared welfare pool. When a member loses someone in their nuclear family, the fund releases an immediate contribution to help with funeral costs, repatriation, and family support &mdash; whether the loss is here in Australia or back home in Kenya.
+        </p>
+        <p>
+          The welfare team coordinates with the bereaved family to ensure dignity, privacy and care every step of the way.
+        </p>
+        <div class="welfare-coverage">
+          <h4>Nuclear Family Coverage Includes</h4>
+          <ul>
+            <li>The member themselves</li>
+            <li>Legally recognised spouse</li>
+            <li>Biological and legally adopted children</li>
+            <li>Biological parents of the member</li>
+            <li>Parents-in-law (spouse's parents)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="welfare-visual reveal">
+        <h3>Harambee Fund</h3>
+        <div class="big-number">100%</div>
+        <p>Member-led, member-funded. Every contribution stays in the community and goes directly to families who need it.</p>
+        <a href="#welfare-info" class="btn btn-gold" style="margin-top: 30px;">Read the Welfare Policy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Events ========== -->
+<section class="events" id="events">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Community Events</span>
+      <h2>What's Happening in the Top End</h2>
+      <p>From Mitchell Street to Mindil Beach &mdash; here's where the Kenyan community in Darwin is gathering next.</p>
+    </div>
+    <div class="event-tabs reveal" role="tablist">
+      <button class="event-tab active" data-filter="upcoming">Upcoming</button>
+      <button class="event-tab" data-filter="past">Past Events</button>
+    </div>
+    <div class="events-grid" id="eventsGrid">
+      <!-- Upcoming -->
+      <article class="event-card reveal" data-type="upcoming">
+        <div class="event-banner bg-image bg-bbq">
+          <div class="event-banner-text">
+            <div class="day">14</div>
+            <div class="month">Jun 2026</div>
+          </div>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">
+            <span class="badge badge-loc">Nightcliff Foreshore</span>
+            <span class="badge badge-price">$25</span>
+          </div>
+          <h3>KIDA Family BBQ &amp; Sundowner</h3>
+          <p>Bring the kids, bring a side, bring the laughter. Our quarterly family gathering by the sea &mdash; nyama choma, ugali and a Top End sunset.</p>
+          <a href="#" class="event-link">View details &rarr;</a>
+        </div>
+      </article>
+      <article class="event-card reveal" data-type="upcoming">
+        <div class="event-banner bg-image bg-gala">
+          <div class="event-banner-text">
+            <div class="day">20</div>
+            <div class="month">Oct 2026</div>
+          </div>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">
+            <span class="badge badge-loc">Darwin Convention Centre</span>
+            <span class="badge badge-price">$60</span>
+          </div>
+          <h3>Mashujaa Day Dinner Gala</h3>
+          <p>An evening of African couture, Kenyan cuisine and live music celebrating the heroes who shaped our nation. Dress code: smart cultural.</p>
+          <a href="#" class="event-link">View details &rarr;</a>
+        </div>
+      </article>
+      <article class="event-card reveal" data-type="upcoming">
+        <div class="event-banner bg-image bg-picnic">
+          <div class="event-banner-text">
+            <div class="day">12</div>
+            <div class="month">Dec 2026</div>
+          </div>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">
+            <span class="badge badge-loc">East Point Reserve</span>
+            <span class="badge badge-price free">Free</span>
+          </div>
+          <h3>End-of-Year Picnic</h3>
+          <p>Wrap up the year with kids' games, a cultural showcase and our famous Mama Mboga food stations under the mango trees.</p>
+          <a href="#" class="event-link">View details &rarr;</a>
+        </div>
+      </article>
+      <!-- Past -->
+      <article class="event-card reveal" data-type="past" hidden>
+        <div class="event-banner bg-image bg-jamhuri">
+          <div class="event-banner-text">
+            <div class="day">12</div>
+            <div class="month">Dec 2025</div>
+          </div>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">
+            <span class="badge badge-loc">Casuarina Beach</span>
+            <span class="badge badge-past">Past</span>
+          </div>
+          <h3>Jamhuri Day Celebration 2025</h3>
+          <p>A full day of dance, drumming and three generations of Kenyan-Darwinites celebrating 62 years of independence.</p>
+          <a href="#" class="event-link">See gallery &rarr;</a>
+        </div>
+      </article>
+      <article class="event-card reveal" data-type="past" hidden>
+        <div class="event-banner bg-image bg-madaraka">
+          <div class="event-banner-text">
+            <div class="day">01</div>
+            <div class="month">Jun 2025</div>
+          </div>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">
+            <span class="badge badge-loc">Palmerston Recreation Centre</span>
+            <span class="badge badge-past">Past</span>
+          </div>
+          <h3>Madaraka Day Family Day</h3>
+          <p>Cultural games, a tug-of-war between the elders and the youth, and far too much pilau. Unforgettable.</p>
+          <a href="#" class="event-link">See gallery &rarr;</a>
+        </div>
+      </article>
+      <article class="event-card reveal" data-type="past" hidden>
+        <div class="event-banner bg-image bg-mentor">
+          <div class="event-banner-text">
+            <div class="day">22</div>
+            <div class="month">Mar 2025</div>
+          </div>
+        </div>
+        <div class="event-body">
+          <div class="event-meta">
+            <span class="badge badge-loc">Darwin City Library</span>
+            <span class="badge badge-past">Past</span>
+          </div>
+          <h3>Youth &amp; Career Mentorship Night</h3>
+          <p>Our professionals shared career journeys with KIDA youth navigating uni, apprenticeships and life in the NT.</p>
+          <a href="#" class="event-link">See gallery &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="pattern-divider" aria-hidden="true"></div>
+
+<!-- ========== Leadership ========== -->
+<section class="leadership" id="leadership">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Our Committee</span>
+      <h2>Leadership &amp; Coordination</h2>
+      <p>Volunteers from across Darwin who give their time, heart and energy to keep KIDA strong, transparent and welcoming.</p>
+    </div>
+    <div class="leaders-grid">
+      <div class="leader-card reveal">
+        <div class="leader-avatar"><div class="leader-initials">JM</div></div>
+        <h3>James Mwangi</h3>
+        <p class="leader-role">President</p>
+        <div class="leader-bar"></div>
+      </div>
+      <div class="leader-card reveal">
+        <div class="leader-avatar"><div class="leader-initials">WK</div></div>
+        <h3>Wanjiru Kamau</h3>
+        <p class="leader-role">Vice President</p>
+        <div class="leader-bar"></div>
+      </div>
+      <div class="leader-card reveal">
+        <div class="leader-avatar"><div class="leader-initials">DO</div></div>
+        <h3>David Otieno</h3>
+        <p class="leader-role">Secretary General</p>
+        <div class="leader-bar"></div>
+      </div>
+      <div class="leader-card reveal">
+        <div class="leader-avatar"><div class="leader-initials">GN</div></div>
+        <h3>Grace Njeri</h3>
+        <p class="leader-role">Treasurer</p>
+        <div class="leader-bar"></div>
+      </div>
+      <div class="leader-card reveal">
+        <div class="leader-avatar"><div class="leader-initials">PC</div></div>
+        <h3>Peter Cheruiyot</h3>
+        <p class="leader-role">Social Media Officer</p>
+        <div class="leader-bar"></div>
+      </div>
+      <div class="leader-card reveal">
+        <div class="leader-avatar"><div class="leader-initials">FA</div></div>
+        <h3>Faith Atieno</h3>
+        <p class="leader-role">Women Department Leader</p>
+        <div class="leader-bar"></div>
+      </div>
+      <div class="leader-card reveal">
+        <div class="leader-avatar"><div class="leader-initials">SM</div></div>
+        <h3>Samuel Mutua</h3>
+        <p class="leader-role">Member Coordinator</p>
+        <div class="leader-bar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Join CTA ========== -->
+<section class="join-cta" id="join">
+  <div class="container reveal">
+    <h2>Be Part of Something <em>Bigger</em> &mdash; Join KIDA Today</h2>
+    <p>Whether you've been in Darwin a month or a decade, there's a seat at our table for you. Sign up in minutes and start belonging from day one.</p>
+    <div class="hero-cta-row">
+      <a class="btn btn-gold" href="#register-now">Register Today
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a class="btn btn-outline" href="mailto:info@kenyansindarwin.com.au">Email the Committee</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Footer ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-mark" aria-hidden="true"></div>
+          <div class="logo-text">
+            <strong>KIDA</strong>
+            <span>Kenyans In Darwin</span>
+          </div>
+        </div>
+        <p>A community of Kenyan families and friends across Darwin and the Northern Territory. Karibu nyumbani.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.99 3.657 9.128 8.438 9.879v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.892h-2.33v6.987C18.343 21.128 22 16.99 22 12z"/></svg>
+          </a>
+          <a href="mailto:info@kenyansindarwin.com.au" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="#" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#register">Membership</a></li>
+          <li><a href="#welfare">Welfare</a></li>
+          <li><a href="#events">Events</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#leadership">Committee</a></li>
+          <li><a href="#join">Join KIDA</a></li>
+          <li><a href="#">Constitution</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Code of Conduct</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--kcd-gold-bright)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px;flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Darwin, Northern Territory<br/>Australia
+        </p>
+        <p>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--kcd-gold-bright)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:3px;flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@kenyansindarwin.com.au">info@kenyansindarwin.com.au</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <strong style="color: var(--kcd-gold-bright);">Disclaimer:</strong> KIDA &mdash; Kenyans In Darwin is a not-for-profit, member-funded community association. Any views, opinions or services shared on this site or by members of the association do not represent the official position of the Government of Kenya, the Government of the Northern Territory, or the Commonwealth of Australia. Welfare contributions are voluntary and governed by our Constitution.
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; <span id="year"></span> Kenyans In Darwin (KIDA). All rights reserved.</span>
+      <span>Crafted with <span style="color: var(--kcd-red);">&hearts;</span> in the Top End</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
