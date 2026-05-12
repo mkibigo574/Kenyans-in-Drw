@@ -1054,6 +1054,8 @@ section { padding: 110px 0; position: relative; }
 .leader-card:nth-child(5) .leader-avatar { background: linear-gradient(135deg, var(--kcd-green), var(--kcd-gold)); }
 .leader-card:nth-child(6) .leader-avatar { background: linear-gradient(135deg, var(--kcd-red), var(--kcd-charcoal)); }
 .leader-card:nth-child(7) .leader-avatar { background: linear-gradient(135deg, var(--kcd-black), var(--kcd-gold)); }
+.leader-card:nth-child(8) .leader-avatar { background: linear-gradient(135deg, var(--kcd-red-deep), var(--kcd-gold)); }
+.leader-card:nth-child(9) .leader-avatar { background: linear-gradient(135deg, var(--kcd-green), var(--kcd-red)); }
 .leader-initials {
   font-family: var(--serif);
   font-size: 4rem;
