@@ -806,9 +806,11 @@ section { padding: 110px 0; position: relative; }
 .payment-amount {
   display: flex;
   align-items: baseline;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 12px;
+  margin-bottom: 14px;
   font-family: var(--serif);
+  padding-bottom: 6px;
+  line-height: 1.15;
 }
 .payment-amount .currency {
   font-size: 1.1rem;
@@ -819,12 +821,13 @@ section { padding: 110px 0; position: relative; }
 .payment-amount .amount {
   font-size: clamp(3.6rem, 7vw, 5.6rem);
   font-weight: 900;
-  line-height: 1;
+  line-height: 1.15;
   background: linear-gradient(180deg, #ffffff 0%, var(--kcd-gold-bright) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 4px 30px rgba(212, 166, 74, .25);
+  display: inline-block;
+  padding: 4px 0 8px;
 }
 .payment-period {
   color: rgba(250, 244, 232, .85);
@@ -1353,14 +1356,12 @@ section { padding: 110px 0; position: relative; }
 }
 
 /* ========== Join CTA ========== */
+/* Kenyan flag (left) merging into Australian flag (right) — real images */
 .join-cta {
-  background:
-    radial-gradient(circle at 30% 70%, rgba(212, 166, 74, .18), transparent 50%),
-    radial-gradient(circle at 85% 20%, rgba(1, 33, 105, .35), transparent 55%),
-    linear-gradient(120deg, var(--kcd-red-deep) 0%, var(--kcd-red) 45%, var(--aus-navy) 100%);
+  background: #050505;
   color: var(--kcd-cream);
   text-align: center;
-  padding: 130px 0;
+  padding: 140px 0;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -1369,24 +1370,39 @@ section { padding: 110px 0; position: relative; }
   content: '';
   position: absolute;
   inset: 0;
-  opacity: .1;
-  background:
-    radial-gradient(circle at 20% 20%, var(--kcd-gold) 0 2px, transparent 3px) 0 0 / 32px 32px,
-    radial-gradient(circle at 80% 80%, var(--kcd-cream) 0 2px, transparent 3px) 0 0 / 38px 38px;
-  z-index: -1;
+  z-index: -2;
+  background: url('Kenyan flag.jpg') left center / 55% 100% no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 40%, transparent 55%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 40%, transparent 55%);
 }
 .join-cta::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(45deg, rgba(212,166,74,.05) 0 1px, transparent 1px 30px);
+  z-index: -2;
+  background: url('austrain flag.webp') right center / 55% 100% no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 45%, #000 60%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 45%, #000 60%, #000 100%);
+}
+/* Dark veil + soft golden seam down the middle */
+.join-cta-seam {
+  position: absolute;
+  inset: 0;
   z-index: -1;
+  pointer-events: none;
+  background:
+    /* gold seam line at the merge point */
+    linear-gradient(90deg, transparent 49%, rgba(212, 166, 74, .55) 50%, transparent 51%),
+    /* centered dark veil for legible text */
+    radial-gradient(ellipse 75% 60% at center, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .4) 55%, rgba(0, 0, 0, .15) 100%),
+    /* edge darken for readability of CTAs against bright flag colors */
+    linear-gradient(180deg, rgba(0,0,0,.25) 0%, transparent 30%, transparent 70%, rgba(0,0,0,.3) 100%);
 }
 .join-cta h2 {
-  color: var(--kcd-cream);
+  color: #ffffff;
   margin-bottom: 20px;
   font-size: clamp(2.2rem, 4.8vw, 3.8rem);
-  text-shadow: 0 4px 24px rgba(0,0,0,.3);
+  text-shadow: 0 2px 8px rgba(0,0,0,.7), 0 6px 30px rgba(0,0,0,.6);
 }
 .join-cta h2 em {
   color: var(--kcd-gold-bright);
@@ -1402,7 +1418,7 @@ section { padding: 110px 0; position: relative; }
   max-width: 660px;
   margin: 0 auto 42px;
   font-weight: 400;
-  text-shadow: 0 2px 8px rgba(0,0,0,.35);
+  text-shadow: 0 2px 8px rgba(0,0,0,.7), 0 4px 16px rgba(0,0,0,.5);
 }
 
 /* ========== Footer ========== */
