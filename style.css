@@ -248,50 +248,35 @@ button:focus-visible {
   inset: 0;
   z-index: -2;
 }
-.carousel-slide::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  opacity: .14;
-  pointer-events: none;
-  background-image:
-    repeating-linear-gradient(45deg, var(--kcd-gold) 0 1.5px, transparent 1.5px 26px),
-    repeating-linear-gradient(-45deg, var(--kcd-gold) 0 1.5px, transparent 1.5px 26px);
-}
-/* Slide-specific backgrounds — image + strong gradient overlays for high contrast */
+.carousel-slide::after { content: none; }
+/* Slide-specific backgrounds — photos lead, only a centred vignette behind text */
 .slide-1::before {
   background:
-    radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .65) 80%),
-    linear-gradient(135deg, rgba(15, 69, 37, .8) 0%, rgba(15, 15, 16, .85) 50%, rgba(122, 17, 24, .82) 100%),
+    radial-gradient(ellipse 55% 45% at center, rgba(0, 0, 0, .55) 0%, rgba(0, 0, 0, .2) 55%, transparent 80%),
     url('1200x640.jpg') center/cover no-repeat;
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
 .slide-2::before {
   background:
-    radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .65) 80%),
-    linear-gradient(160deg, rgba(28, 26, 24, .85) 0%, rgba(122, 17, 24, .75) 55%, rgba(15, 15, 16, .9) 100%),
+    radial-gradient(ellipse 55% 45% at center, rgba(0, 0, 0, .55) 0%, rgba(0, 0, 0, .2) 55%, transparent 80%),
     url('i (2).webp') center/cover no-repeat;
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
 .slide-3::before {
   background:
-    radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .65) 80%),
-    linear-gradient(200deg, rgba(15, 15, 16, .85) 0%, rgba(20, 80, 42, .75) 55%, rgba(28, 26, 24, .9) 100%),
+    radial-gradient(ellipse 55% 45% at center, rgba(0, 0, 0, .55) 0%, rgba(0, 0, 0, .2) 55%, transparent 80%),
     url('795049-Scardovari-Sky-Boats-Marinas.jpg') center/cover no-repeat;
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
 .slide-4::before {
   background:
-    radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .7) 80%),
-    linear-gradient(135deg, rgba(122, 17, 24, .6) 0%, rgba(15, 15, 16, .75) 50%, rgba(1, 33, 105, .65) 100%),
+    radial-gradient(ellipse 55% 45% at center, rgba(0, 0, 0, .55) 0%, rgba(0, 0, 0, .2) 55%, transparent 80%),
     url('uluru.jpeg') center/cover no-repeat;
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
 .slide-5::before {
   background:
-    radial-gradient(ellipse at center, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, .75) 80%),
-    linear-gradient(180deg, rgba(1, 33, 105, .55) 0%, rgba(15, 15, 16, .8) 55%, rgba(184, 36, 44, .6) 100%),
+    radial-gradient(ellipse 55% 45% at center, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .25) 55%, transparent 80%),
     url('garramilla.jpeg') center/cover no-repeat;
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
